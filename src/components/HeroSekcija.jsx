@@ -1,9 +1,11 @@
 import React from 'react';
 import './CSS/HeroSekcija.css';
+import AppointmentForm from './AppointmentForm';
+
 
 const HeroSekcija = ({naslov, opis, dugme1, dugme2, slika}) => {
   return (
-
+    <>
      <section className="hero">
       <div className='hero-grid'>
         <div className="hero-kolona1">
@@ -22,8 +24,10 @@ const HeroSekcija = ({naslov, opis, dugme1, dugme2, slika}) => {
 
       </div>
 
+      
     </section>
-    
+     <AppointmentForm />
+     </>
   )
 }
 
