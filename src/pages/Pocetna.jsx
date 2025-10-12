@@ -1,6 +1,12 @@
 import React from 'react'
 import HeroSekcija from '../components/HeroSekcija'
-import OnamaSekcija from '../components/OnamaSekcija'
+import AboutUsSection from '../components/AboutUsSection'
+import Traka from '../components/Traka'
+import ServiceCard from '../components/ServiceCard'
+import OurServices from '../components/OurServices'
+import WhyChooseUsSection from '../components/WhyChooseUsSection'
+import CaseStoriesSection from '../components/CaseStoriesSection'
+import HowItWorksSection from '../components/HowItWorksSection'
 
 const Pocetna = () => {
   return (
@@ -12,11 +18,16 @@ const Pocetna = () => {
        dugme2={"Watch Video"}
        slika={'../../images/hero-doktorka.png'}
      > </HeroSekcija>
-         <OnamaSekcija />
+         
 
-    <section className="about">
-
-    </section>
+    <AboutUsSection />
+    <Traka />
+    
+    <OurServices />
+    <Traka />
+    <WhyChooseUsSection />
+    <CaseStoriesSection />
+    <HowItWorksSection />
    </>
   )
 }
