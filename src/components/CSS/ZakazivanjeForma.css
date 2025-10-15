@@ -1,0 +1,152 @@
+:root{
+  --primarna: #1d40ff;
+  --primarna-2: #2346ff;
+  --sekundarna: #0c1f41;
+  --pozadina: #fbfbff;
+  --muted: #949398;
+  --input-border: #eef0fb;
+}
+
+/* reset */
+*{box-sizing:border-box}
+body{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; padding:0}
+
+/* Sekcija i raspored */
+.zakazivanje-sekcija{
+  padding: 48px 28px;
+  background: linear-gradient(180deg, var(--pozadina), #ffffff);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.zakazivanje-kontejner{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* LEVI / DESNI */
+.zakazivanje-levo{padding-right:10px}
+.zakazivanje-desno{
+    padding-left:10px;
+    padding-top: 20%;
+}
+
+/* Naslov */
+.zakazivanje-podnaslov{
+  font-size:0.85rem;
+  color:var(--sekundarna);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.zakazivanje-naslov{
+  font-size:2.4rem;
+  font-weight:800;
+  color:var(--sekundarna);
+  margin:0 0 18px 0;
+  line-height:1.02;
+}
+
+.zakazivanje-naslov-primarni{ color: var(--primarna) }
+
+/* FORMA - raspored polja: polja su plutaćeg izgleda sa senkom i blago zaobljena */
+.zakazivanje-forma{ background:transparent; width:100% }
+
+.zakazivanje-row{ display:flex; gap:18px; margin-bottom:14px; align-items:flex-end }
+.zakazivanje-twocols .zakazivanje-polje{ flex:1; display:flex; flex-direction:column; }
+
+/* label */
+.zakazivanje-label{ font-size:0.82rem; color:var(--muted); margin-bottom:8px }
+
+/* inputs */
+.zakazivanje-input, .zakazivanje-textarea{
+  border: 1px solid var(--input-border);
+  background: #fff;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size:0.95rem;
+  color:var(--sekundarna);
+  outline:none;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+/* posebno za datum i vreme da budu kraći u dizajnu (ako želiš different width, promeni) */
+.zakazivanje-input[type="date"],
+.zakazivanje-input[type="time"]{ padding:10px }
+
+/* textarea */
+.zakazivanje-textarea{ min-height:120px; resize:vertical }
+
+/* full width polje (text area) */
+.zakazivanje-polje-full{ width:100%; margin-bottom:16px }
+
+/* CTA dugme sa plavom gradijent senkom i oblikom iz slike */
+.zakazivanje-actions{ margin-top:12px; display:flex; justify-content:flex-start }
+.zakazivanje-cta{
+  background: linear-gradient(180deg, var(--primarna), var(--primarna-2));
+  color:#fff;
+  padding:12px 20px;
+  border-radius:28px;
+  font-weight:700;
+  box-shadow: 0 10px 30px rgba(29,64,255,0.18);
+  border: none;
+  cursor: pointer;
+}
+
+/* DESNI SIDEBAR: ABOUT tekst */
+.zakazivanje-about p{ color:var(--muted); font-size:0.95rem; margin:0 0 18px 0 }
+
+/* Kartice (hours i emergency) */
+.zakazivanje-card{
+  background:#fff;
+  border-radius:16px;
+  padding:18px;
+  box-shadow: 0 6px 24px rgba(16,24,40,0.06);
+  margin-bottom:18px;
+}
+
+/* HOURS - veliki plavi card sa zaobljenim uglovima, širim paddingom kao na slici */
+.zakazivanje-hours{
+  background: linear-gradient(135deg, var(--primarna), var(--primarna-2));
+  color:#fff;
+  padding:28px;
+  border-radius:14px;
+}
+
+/* list style u hours - razmak i tanke linije */
+.zakazivanje-hours h4{ margin:0 0 10px 0; font-weight:700; font-size:1rem }
+.zakazivanje-hours ul{ list-style:none; padding:0; margin:0; }
+.zakazivanje-hours li{
+  display:flex;
+  justify-content:space-between;
+  padding:14px 0;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+.zakazivanje-hours li:first-child{ border-top:0; }
+
+/* Emergency card */
+.zakazivanje-emergency{ display:flex; align-items:center; padding:14px; border-radius:14px; }
+.zakazivanje-em-row{ display:flex; gap:14px; align-items:center; }
+.zakazivanje-ikonica{
+  width:52px; height:52px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04));
+  font-size:20px;
+}
+.zakazivanje-small{ font-size:0.8rem; color:rgba(0,0,0,0.6); margin:0 }
+.zakazivanje-emergency h4{ margin:4px 0 0 0 }
+.zakazivanje-muted{ color:var(--muted); margin:4px 0 0 0 }
+
+/* Responsivnost */
+@media (max-width: 1000px){
+  .zakazivanje-kontejner{ grid-template-columns: 1fr; }
+  .zakazivanje-desno{ order: 2; }
+  .zakazivanje-levo{ order: 1; }
+  .zakazivanje-row{ flex-direction:column; }
+  .zakazivanje-actions{ justify-content:flex-start; }
+}

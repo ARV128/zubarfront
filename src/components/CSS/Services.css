@@ -1,0 +1,12 @@
+.sekcija-usluge{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+}
+
+.naslovBeli{
+    color: white;
+}

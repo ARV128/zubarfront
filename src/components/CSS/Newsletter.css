@@ -1,0 +1,132 @@
+.newsletter-container {
+  width: 100%;
+  background-color: #f5f5f7;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.newsletter-label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.newsletter-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.3;
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: #3b82f6;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+}
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+.email-icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+  stroke: white;
+}
+
+.email-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0 20px;
+  color: #6b7280;
+  background: transparent;
+}
+
+.email-input::placeholder {
+  color: #9ca3af;
+}
+
+.subscribe-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 18px 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.subscribe-button:hover {
+  background-color: #2563eb;
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.subscribe-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .newsletter-title {
+    font-size: 32px;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .input-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .subscribe-button {
+    width: 100%;
+    max-width: 450px;
+  }
+}
