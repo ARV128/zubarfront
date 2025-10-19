@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import Navbar from './components/navigacija/Navbar';
 import AboutUs from './pages/AboutUs';
 import Dentists from './pages/Dentists';
+import NotFound from './pages/NotFound';
 
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
         <Route path="/services" element={<Services />}></Route>
         <Route path="/about" element={<AboutUs/>}></Route>
         <Route path="dentists" element={<Dentists/>}></Route>
+
+
+        <Route path="*" element={<NotFound/>}></Route>
 
       </Routes>
      </BrowserRouter>

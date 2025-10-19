@@ -1,0 +1,280 @@
+:root {
+  --primary-color: #1d40ff;
+  --secondary-color: #0c1f41;
+  --background-color: #f5f5f5;
+  --text-color: #949398;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.notfound-container {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stars */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.star {
+  position: absolute;
+  background: var(--primary-color);
+}
+
+.star-1 {
+  width: 20px;
+  height: 20px;
+  top: 80px;
+  left: 5%;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: twinkle 3s infinite;
+}
+
+.star-2 {
+  width: 14px;
+  height: 14px;
+  top: 120px;
+  left: 8%;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: twinkle 3s infinite 0.5s;
+}
+
+.star-3 {
+  width: 16px;
+  height: 16px;
+  top: 100px;
+  right: 5%;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: twinkle 3s infinite 1s;
+}
+
+.star-4 {
+  width: 12px;
+  height: 12px;
+  bottom: 150px;
+  right: 8%;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: twinkle 3s infinite 1.5s;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Content */
+.notfound-content {
+  text-align: center;
+  z-index: 10;
+  max-width: 600px;
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-code {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 20px;
+  letter-spacing: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.code-dark {
+  color: var(--secondary-color);
+  display: inline-block;
+}
+
+.code-blue {
+  color: var(--primary-color);
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.error-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.title-span {
+  color: var(--primary-color);
+}
+
+.error-description {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.home-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 15px 45px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(29, 64, 255, 0.3);
+}
+
+.home-button:hover {
+  background-color: #0d2fd9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(29, 64, 255, 0.4);
+}
+
+.home-button:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 80px;
+    letter-spacing: 5px;
+  }
+
+  .error-title {
+    font-size: 2rem;
+  }
+
+  .error-description {
+    font-size: 0.95rem;
+  }
+
+  .home-button {
+    padding: 12px 35px;
+    font-size: 0.95rem;
+  }
+
+  .star-1 {
+    width: 16px;
+    height: 16px;
+    top: 60px;
+  }
+
+  .star-2 {
+    width: 12px;
+    height: 12px;
+    top: 100px;
+  }
+
+  .star-3 {
+    width: 14px;
+    height: 14px;
+    top: 80px;
+  }
+
+  .star-4 {
+    width: 10px;
+    height: 10px;
+    bottom: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound-container {
+    padding: 15px;
+  }
+
+  .error-code {
+    font-size: 60px;
+    letter-spacing: 3px;
+  }
+
+  .error-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .error-description {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .home-button {
+    padding: 10px 30px;
+    font-size: 0.9rem;
+  }
+
+  .star-1 {
+    width: 12px;
+    height: 12px;
+    top: 50px;
+    left: 3%;
+  }
+
+  .star-2 {
+    width: 10px;
+    height: 10px;
+    top: 80px;
+    left: 5%;
+  }
+
+  .star-3 {
+    width: 11px;
+    height: 11px;
+    top: 60px;
+    right: 3%;
+  }
+
+  .star-4 {
+    width: 8px;
+    height: 8px;
+    bottom: 100px;
+    right: 5%;
+  }
+}
