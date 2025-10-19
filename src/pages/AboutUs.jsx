@@ -8,6 +8,7 @@ import VideoSnimakStats from '../components/VideoSnimakStats';
 import WhyChooseUsSection from '../components/WhyChooseUsSection';
 import HowItWorksSection from '../components/HowItWorksSection';
 import TestimonialsSection from '../components/TestimonialsSection';
+import ZubarSection from '../components/ZubarSection';
 
 const AboutUs = () => {
   return (
@@ -51,7 +52,7 @@ const AboutUs = () => {
     <TestimonialsSection></TestimonialsSection>
     <WhyChooseUsSection></WhyChooseUsSection>
     <Traka></Traka>
-
+     <ZubarSection></ZubarSection>
     </>
   )
 }
