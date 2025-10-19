@@ -9,8 +9,14 @@ import WhyChooseUsSection from '../components/WhyChooseUsSection';
 import HowItWorksSection from '../components/HowItWorksSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import ZubarSection from '../components/ZubarSection';
+import useZubari from '../components/hooks/useZubari';
+import AwardsSection from '../components/AwardSection';
+import FAQ from '../components/FAQ';
+import ZakazivanjeForma from '../components/ZakazivanjeForma';
+import Newsletter from '../components/Newsletter';
 
 const AboutUs = () => {
+  const zubari=useZubari();
   return (
     <>
      <HeroOstaleStranice naslov={"About Us"}></HeroOstaleStranice>
@@ -52,7 +58,11 @@ const AboutUs = () => {
     <TestimonialsSection></TestimonialsSection>
     <WhyChooseUsSection></WhyChooseUsSection>
     <Traka></Traka>
-     <ZubarSection></ZubarSection>
+    <ZubarSection dentists={(zubari || []).slice(0, 3)} />
+    <AwardsSection/>
+    <FAQ boja={"tegetSekcija"}/>
+    <ZakazivanjeForma/>
+    <Newsletter/>
     </>
   )
 }

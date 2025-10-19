@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Services from './pages/Services';
 import Navbar from './components/navigacija/Navbar';
 import AboutUs from './pages/AboutUs';
+import Dentists from './pages/Dentists';
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <Route path="/" element={<Pocetna />}></Route>
         <Route path="/services" element={<Services />}></Route>
         <Route path="/about" element={<AboutUs/>}></Route>
+        <Route path="dentists" element={<Dentists/>}></Route>
 
       </Routes>
      </BrowserRouter>

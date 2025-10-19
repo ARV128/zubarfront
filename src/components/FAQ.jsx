@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../components/CSS/FAQ.css";
 import { GrChatOption } from "react-icons/gr";
 
-export default function FAQ() {
+export default function FAQ({boja}) {
   const faqs = [
     {
       q: "What services do you offer?",
@@ -43,7 +43,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="faq-section">
+    <section className={`faq-section ${boja?boja:''}`}>
       <div className="faq-container">
         <div className="faq-left">
           <p className="faq-subtitle">FAQs</p>
