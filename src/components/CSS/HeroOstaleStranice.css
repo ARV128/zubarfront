@@ -1,15 +1,81 @@
 .hero-ostale-stranice{
-    
+    /* pozadina */
     background-image: url('../../../public/images/hero-pozadina.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: center;
-    padding: 5% 10%;
+
+    /* centriranje sadržaja kao kolona (naslov + breadcrumb ispod) */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    /* veći vertikalni padding da dobiješ taj "hero" osećaj */
+    padding: 6rem 1.5rem;
+    text-align: center;
 }
 
+/* naslov (veliki, debeo, tamnoplava boja) */
+.hero-ostale-stranice .title{
+    margin: 0;
+    font-size: 3.2rem; /* ~51px na desktopu */
+    line-height: 1.05;
+    font-weight: 700;
+    color: #0b2a66; /* tamnija plava */
+    letter-spacing: 0.2px;
+    text-transform: none;
+}
 
+/* breadcrumb kontejner (manji i svetliji) */
+.breadcrumbs{
+    margin-top: 0.6rem;
+    font-size: 0.95rem; /* ~15px */
+    color: #8b95a0; /* sivo-plava nijansa */
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    user-select: none;
+}
 
+/* linkovi u breadcrumb-u (Home i eventualno drugi, osim poslednjeg) */
+.breadcrumbs a{
+    color: #7a8696;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .15s;
+}
+
+/* hover efekat (diskretan) */
+.breadcrumbs a:hover{
+    color: #0b2a66;
+    text-decoration: underline;
+}
+
+/* separator (ako u JS ostaje ' /' kao tekst, ovo će samo malo smanjiti kontrast) */
+.breadcrumbs span{
+    display: inline-flex;
+    align-items: center;
+}
+
+/* stil za poslednji element (trenutna stranica) - ne link, tamnije i boldnije */
+.breadcrumbs .current,
+.breadcrumbs span:last-child{
+    color: #6a6f75;
+    font-weight: 600;
+    cursor: default;
+    text-decoration: none;
+}
+
+/* responsivno: manji naslov na mobilu */
+@media (max-width: 600px){
+    .hero-ostale-stranice{
+        padding: 3.2rem 1rem;
+    }
+    .hero-ostale-stranice .title{
+        font-size: 2rem; /* ~32px */
+    }
+    .breadcrumbs{
+        font-size: 0.9rem;
+    }
+}
